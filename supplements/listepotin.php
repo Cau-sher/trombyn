@@ -1,6 +1,7 @@
 <?php
     if ($Id=='OKDAK') {
         include ("../conex.inc");
+        $count = getHTTPVars('count', $_POST, $_GET);
         include("../aqua_haut.htm");
 ?>
 <a href="../membres/indexmf.php?rediger=oui"><p align=right><img src="images/plume.gif" border="0"></a>

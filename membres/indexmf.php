@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	
 	require ("fonctions.inc");
 	include ("../conex.inc");
@@ -20,7 +20,7 @@
 <html>
 	<head>
 		<title>Tr@mbyn</title>
-        <link rel="SHORCUT ICON" href="https://zitounquat.free.fr/zitoun/trombyn/membres/favicon.ico">
+        <link rel="shortcut icon" href="https://zitounquat.free.fr/zitoun/trombyn/membres/favicon.ico">
 		<script language="javascript">
 			function showhide(what,what2) {
 				if (what.style.display=='none') {
