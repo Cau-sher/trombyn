@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	function getHHTPVars($name, $POST, $GET)
 	{
 		$value='';    
@@ -12,8 +12,8 @@
 		 return $value;
 	}
 
-	$userfile = $HTTP_POST_FILES['userfile']['tmp_name'];
-	$userfile_name = $HTTP_POST_FILES['userfile']['name'];
+	$userfile = $_FILES['userfile']['tmp_name'];
+	$userfile_name = $_FILES['userfile']['name'];
 	$userfile_name = str_replace(" ","_",$userfile_name);
 
 	if(!ereg(".gif$", $userfile_name) && !ereg(".jpg$", $userfile_name))
