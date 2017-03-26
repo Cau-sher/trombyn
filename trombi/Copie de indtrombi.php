@@ -1,9 +1,9 @@
-<?php
+ï»¿<?php
 
 	include("../aqua_haut.htm");
 	include ("../conex.inc");
 	
-//récupérations des variables
+//rÃ©cupÃ©rations des variables
 function getHTTPVars($name, $POST, $GET) {
  $value='';    
  if (isset($POST[$name])) {
@@ -24,7 +24,7 @@ $keydupere = getHTTPVars("keydupere", $HTTP_POST_VARS, $HTTP_GET_VARS);
 $keydumere = getHTTPVars("keydumere", $HTTP_POST_VARS, $HTTP_GET_VARS);
 
 	
-//choix du référant pour l'affichage --> par défaut l'administrateur
+//choix du rÃ©fÃ©rant pour l'affichage --> par dÃ©faut l'administrateur
 //if ($reftrombi=="" and $refcook=="") {
 //	$reftrombi=4;
 //} else {
@@ -37,7 +37,7 @@ if ($reftrombi=="") {
 	$reftrombi = $HTTP_GET_VARS["reftrombi"];
 }
 
-//récupération des données du reférant pour l'affichage de la généalogie
+//rÃ©cupÃ©ration des donnÃ©es du refÃ©rant pour l'affichage de la gÃ©nÃ©alogie
 $Sqllist="SELECT * FROM coordonnees AS coor, identifiant AS ident WHERE coor.id_key = ident.id_key AND ident.id_key = $reftrombi";
 //echo $Sqllist;
 $Resultlist = mysql_query($Sqllist,$conexion);
@@ -52,7 +52,7 @@ mysql_query($Resultlist);
 			$keyepouxsa = $ValVerif["id_key_epoux"];
 			$genesa = $ValVerif["generation"];
 			$sexesa = $ValVerif["sexe"];
-			//écriture des requêtes de récupération des enfants & des frères&soeurs du référent
+			//Ã©criture des requ?s de r?p?tion des enfants & des fr?s&soeurs du r?rent
 			if ($sexesa=="M" AND $keyperesa<>"") {
 				$Sqllistenfant="SELECT * FROM coordonnees AS coor, identifiant AS ident WHERE coor.id_key = ident.id_key"
 				." AND ident.id_key_pere = $reftrombi ORDER BY naiss";
@@ -74,7 +74,7 @@ mysql_query($Resultlist);
 			}
 		}
 	}
-// récupération des données du pére du référent
+// r?p?tion des donn? du p? du r?rent
 if ($keyperesa<>"") {	
 $Sqllistpere="SELECT * FROM coordonnees AS coor, identifiant AS ident WHERE coor.id_key = ident.id_key"
 	." AND ident.id_key = $keyperesa";
@@ -93,7 +93,7 @@ mysql_query($Resultlistpere);
 		}
 	}
 }
-// récupération des données de la mère du référent
+// r?p?tion des donn? de la m? du r?rent
 if ($keymeresa<>"") {	
 $Sqllistmere="SELECT * FROM coordonnees AS coor, identifiant AS ident WHERE coor.id_key = ident.id_key"
 	." AND ident.id_key = $keymeresa";
@@ -114,7 +114,7 @@ mysql_query($Resultlistmere);
 }	
 	
 
-// récupération des données des enfants et des conjoints
+// r?p?tion des donn? des enfants et des conjoints
 if ($Sqllistenfant<>"") {
 $Resultlistenfant = mysql_query($Sqllistenfant,$conexion);
 mysql_query($Resultlistenfant);
@@ -158,7 +158,7 @@ $countenf=0;
 	}
 }
 
-// récupération des données des frères&soeurs et conjoints
+// r?p?tion des donn? des fr?s&soeurs et conjoints
 $Resultlistfreso = mysql_query($Sqllistfrso,$conexion);
 mysql_query($Resultlistfreso);
 $countfs=0;
@@ -200,15 +200,15 @@ $countfs=0;
 
 ?>
 
-<!--Tous les données sont récupérées, on dessine la généalogie-->
+<!--Tous les donn? sont r?p?es, on dessine la g?alogie-->
 <table border=0 align=center cellpadding=0 cellspacing=0 width=100%><tr><td>
 <table border=0 align=center cellpadding=0 cellspacing=0>
 <?php
 if ($prenomdupere=="") {
-	$prenomdupere = "Non_enregistré";
+	$prenomdupere = "Non_enregistr?
 }
 if ($prenomdumere=="") {
-	$prenomdumere = "Non_enregistré";
+	$prenomdumere = "Non_enregistr?
 }
 if (trim($photodupere)=="") {
 	$photodupere = "vide.jpg";

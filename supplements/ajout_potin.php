@@ -1,7 +1,7 @@
-<?php
+ï»¿<?php
 
 
-//récupérations des variables
+//rÃ©cupÃ©rations des variables
 function getHTTPVars($name, $POST, $GET) {
  $value='';    
  if (isset($POST[$name])) {

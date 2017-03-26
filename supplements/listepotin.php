@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 if ($Id=='OKDAK') {
 
 	include ("../conex.inc");
@@ -48,7 +48,7 @@ while ($val = mysql_fetch_array($result)) { ?>
 }
 ?>
 </table>
-<a href="indexmf.php?potinbox=oui&count=<?php echo $count+10;?>" border=0><img src="../images/preced.gif" border=0>Précédents</a> 
+<a href="indexmf.php?potinbox=oui&count=<?php echo $count+10;?>" border=0><img src="../images/preced.gif" border=0>PrÃ©cÃ©dents</a> 
 <?php
 if ($count<>0) { 
 	echo " --- <a href=indexmf.php?potinbox=oui&count=".($count-10)." border=0>Suivants<img src=../images/suiv.gif border=0></a>";

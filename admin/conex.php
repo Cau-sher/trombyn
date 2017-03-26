@@ -1,4 +1,4 @@
-<?php
+Ôªø<?php
 
 function getHTTPVars($name, $POST, $GET) {
  $value='';    
@@ -39,7 +39,7 @@ $activ = getHTTPVars("activ", $HTTP_POST_VARS, $HTTP_GET_VARS);
 $autre = getHTTPVars("autre", $HTTP_POST_VARS, $HTTP_GET_VARS);
 $pass = getHTTPVars("pass", $HTTP_POST_VARS, $HTTP_GET_VARS);
 
-//crÈation d'un cookie propre ‡ l'administrateur
+//cr√©ation d'un cookie propre √† l'administrateur
 setcookie('Id', 'ADMIN', mktime(0,0,0,1,1,2010));
 	
 	
@@ -64,7 +64,7 @@ if ($link == "" OR $link2 == "") {
 	."\"; $"."passmemb=\"".$passmemb."\"; ?".">";
 	
 	
-	//crÈation des fichiers de conexion et de conf
+	//cr√©ation des fichiers de conexion et de conf
 	if ($fichier=fopen("../conex.inc","w")) {
 		fwrite($fichier, $chaine);
 	}
@@ -107,7 +107,7 @@ if ($link == "" OR $link2 == "") {
 	@mysql_query($result4);
 	
 
-//creation d'un pere virtuel du rÈfÈrent
+//creation d'un pere virtuel du r√©f√©rent
 	
 	$sqlInsertpere="INSERT INTO `coordonnees` (`sexe`, `nom`, `prenom`, `adresse`, `cp`, `ville`, `fone`, `naiss`, `mail`, `pass`, `activ`, `autre`, `photo`) VALUES ('M', '$nom', '', '', '', '', '', '', '', '', '','','')";
 	
@@ -131,7 +131,7 @@ if ($link == "" OR $link2 == "") {
 	
 
 
-//creation d'une mere virtuel du rÈfÈrent
+//creation d'une mere virtuel du r√©f√©rent
 			
 	$sqlInsertmere="INSERT INTO `coordonnees` (`sexe`, `nom`, `prenom`, `adresse`, `cp`, `ville`, `fone`, `naiss`, `mail`, `pass`, `activ`, `autre`, `photo`) VALUES ('F', '$nom', '', '', '', '', '', '', '', '', '','','')";
 	
@@ -155,14 +155,14 @@ if ($link == "" OR $link2 == "") {
 	
 
 
-	//ajout des coordonnÈes du rÈfÈrent
+	//ajout des coordonn√©es du r√©f√©rent
 	
 	$sqlInsertSA="INSERT INTO `coordonnees` (`sexe`, `nom`, `prenom`, `adresse`, `cp`, `ville`, `fone`, `naiss`, `mail`, `pass`, `activ`, `autre`, `photo`) VALUES ('$sexe', '$nom', '$prenom', '$adresse', '$cp', '$ville', '$fone', '$naiss', '$mail', '$pass', '$activ','$autre','$photo')";
 	
 	$result2 = @mysql_query($sqlInsertSA);
 	@mysql_query($result2);
 
-	//rÈcupÈration 	de l' ID du rÈfÈrent
+	//r√©cup√©ration 	de l' ID du r√©f√©rent
 	$sqlRecupIdSA="SELECT * FROM coordonnees WHERE nom='$nom' AND prenom='$prenom'";
 
 	$resultRecupIdSA = @mysql_query($sqlRecupIdSA);
@@ -171,7 +171,7 @@ if ($link == "" OR $link2 == "") {
 		$id_key_SA = $valv["id_key"];
 	}
 
-	//ajout du rÈfÈrent dans la table identifiant	
+	//ajout du r√©f√©rent dans la table identifiant	
 	mysql_select_db($nom);
 	$sqlInsert1="insert into identifiant (id_key, id_key_pere, id_key_mere, statut_social, virtuel, generation, id_key_epoux) values ('$id_key_SA', '$id_key_pere', '$id_key_mere', 'S', 'N', '0', '')";
 
@@ -180,7 +180,7 @@ if ($link == "" OR $link2 == "") {
 
 	//ajout d'un potin de bienvenue	
 	mysql_select_db($nom);
-	$sqlInsert1="insert into potins (Potins, nom) values ('Bienvenue sur votre site, cette rubrique est l‡ pour vous permettre de communiquer entre vous.', 'Le webmaster')";
+	$sqlInsert1="insert into potins (Potins, nom) values ('Bienvenue sur votre site, cette rubrique est l√† pour vous permettre de communiquer entre vous.', 'Le webmaster')";
 
 	$result1 = @mysql_query($sqlInsert1);
 	mysql_query($result1);

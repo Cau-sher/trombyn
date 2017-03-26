@@ -1,10 +1,10 @@
 <?php
 	include ("../conex.inc");
 
+    $count = getHHTPVars('count', $HTTP_POST_VARS, $HTTP_GET_VARS);
 
-$count = getHHTPVars('count', $HTTP_POST_VARS, $HTTP_GET_VARS);
-
-include("../aqua_haut.htm");?>
+    include("../aqua_haut.htm");
+?>
 <font color="red">Ici vous pouvez supprimer les potins inopportuns !</font>
      <form action="delpotin.php" method="get">
     <!-- debut table potin -->
@@ -54,15 +54,12 @@ while ($val = mysql_fetch_array($result)) {
 }
 ?>
 </table><div align="right"><input type="submit" value="Supprimer" name="B1"></form>
-<a href="potins.php?potin=ok&count=<?php echo $count+10;?>" border=0>Précédents </a> 
+<a href="potins.php?potin=ok&count=<?php echo $count+10;?>" border=0>PrÃ©cÃ©dents </a> 
 <?php
-if ($count<>0) { 
-	echo " --- <a href=potins.php?potin=ok&count=".($count-10)." border=0> Suivants</a>";
-}
+    if ($count<>0) { 
+        echo " --- <a href=potins.php?potin=ok&count=".($count-10)." border=0> Suivants</a>";
+    }
 ?>
-    
-    <!-- Fin table Potins -->
-
 <?php
-include("../aqua_bas.htm");
+         include("../aqua_bas.htm");
 ?>
