@@ -28,5 +28,7 @@ Si vous remarquez des bugs ou si vous avez des améliorations n'hésitez pas à 
 Sources (obsolète) :
 ====================
 Url     : http://codes-sources.commentcamarche.net/source/25407-arbre-genealogie-dynamique
+
 Auteur  : ozitoun
+
 Date    : 05/08/2006
