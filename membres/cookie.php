@@ -1,4 +1,4 @@
-<?php
+﻿<?php
     //echo "--".$lekeyref."--".$valid."--".$err."--";
     setcookie("lekey", $lekeyref, mktime(0,0,0,1,1,2020));
 

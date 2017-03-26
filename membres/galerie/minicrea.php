@@ -1,12 +1,12 @@
-<?php
+ï»¿<?php
 	
 
 $nomfoto = $HTTP_GET_VARS["nomfoto"];
 
-//création de la miniature
+//crÃ©ation de la miniature
 					//creation du nouveau nom
 					$new_image_name="mini_".$nomfoto;
-					//creation d'une image php assopciée à l'image jpeg parent du site
+					//creation d'une image php assopciÃ©e Ã  l'image jpeg parent du site
 					$new_image=imagecreatefromjpeg("uploadimg/".$nomfoto);
 					
 					//rapport de taille pour avoir une largeur constante de 50 pixels

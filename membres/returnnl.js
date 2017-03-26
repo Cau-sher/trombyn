@@ -1,4 +1,4 @@
-function insertNewline(obj)
+﻿function insertNewline(obj)
 {
   if(obj.document.selection.type=='Control') return;
   var Range = obj.document.selection.createRange();

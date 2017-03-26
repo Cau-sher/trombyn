@@ -12,31 +12,31 @@ function getHTTPVars($name, $POST, $GET) {
 	 return $value;
 }	
 
-	$ModifPrenom= getHTTPVars("ModifPrenom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifNom= getHTTPVars("ModifNom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifAdresse= getHTTPVars("ModifAdresse", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifCP= getHTTPVars("ModifCP", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifVille= getHTTPVars("ModifVille", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifFone= getHTTPVars("ModifFone", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifNaiss= getHTTPVars("ModifNaiss", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifMail= getHTTPVars("ModifMail", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifAutre= getHTTPVars("ModifAutre", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifActiv= getHTTPVars("ModifActiv", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifPass= getHTTPVars("ModifPass", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$DetailId= getHTTPVars("DetailId", $HTTP_POST_VARS, $HTTP_GET_VARS);
+	$ModifPrenom= getHTTPVars("ModifPrenom", $_POST, $HTTP_GET_VARS);
+	$ModifNom= getHTTPVars("ModifNom", $_POST, $HTTP_GET_VARS);
+	$ModifAdresse= getHTTPVars("ModifAdresse", $_POST, $HTTP_GET_VARS);
+	$ModifCP= getHTTPVars("ModifCP", $_POST, $HTTP_GET_VARS);
+	$ModifVille= getHTTPVars("ModifVille", $_POST, $HTTP_GET_VARS);
+	$ModifFone= getHTTPVars("ModifFone", $_POST, $HTTP_GET_VARS);
+	$ModifNaiss= getHTTPVars("ModifNaiss", $_POST, $HTTP_GET_VARS);
+	$ModifMail= getHTTPVars("ModifMail", $_POST, $HTTP_GET_VARS);
+	$ModifAutre= getHTTPVars("ModifAutre", $_POST, $HTTP_GET_VARS);
+	$ModifActiv= getHTTPVars("ModifActiv", $_POST, $HTTP_GET_VARS);
+	$ModifPass= getHTTPVars("ModifPass", $_POST, $HTTP_GET_VARS);
+	$DetailId= getHTTPVars("DetailId", $_POST, $HTTP_GET_VARS);
 
 	
-	$userfile = $HTTP_POST_FILES['userfile']['tmp_name'];
-$userfile_name = $HTTP_POST_FILES['userfile']['name'];
+	$userfile = $_POST['userfile']['tmp_name'];
+$userfile_name = $_POST['userfile']['name'];
 $userfile_name = str_replace(" ","_",$userfile_name);
 
 
-	//on vérifie que la photo comporte bien une extension jpg ou gif
+	//on vÃ©rifie que la photo comporte bien une extension jpg ou gif
 	if(!ereg(".jpg$", $userfile_name) && !ereg(".gif$", $userfile_name))
 	{
 	    $userfile="";
 	    $userfile_name="";
-	    echo "<font color=green><b><i>Format de photo incorrecte, elle ne sera pas enregistrée !</i></b></font><br>";
+	    echo "<font color=green><b><i>Format de photo incorrecte, elle ne sera pas enregistrÃ©e !</i></b></font><br>";
 	}
 
 	//s'il y a photo on l'upload
@@ -66,5 +66,5 @@ $result = mysql_query($query);
 //header ('location:indexmf.php?trombibox=non&coordosbox=oui&inscripts=&listbox=');
 ?>
 
-Vous pouvez maintenant fermer cette fenêtre<br><br>
+Vous pouvez maintenant fermer cette fenÃªtre<br><br>
 <a href="javascript:window.close();">Fermer</a>

@@ -1,4 +1,4 @@
-/*** Freeware Open Source writen by ngoCanh 2002-05                  */
+ï»¿/*** Freeware Open Source writen by ngoCanh 2002-05                  */
 /*** Original by Vietdev  http://vietdev.sourceforge.net             */
 /*** Release 2002-11-02  R11.0                                       */
 /*** GPL - Copyright protected                                       */
@@ -1247,7 +1247,7 @@ function doKDown()
   if(ctrl && shft && key==221){viewVietX(el,key,3); return false}
   if(ctrl && key==221){viewVietX(el,key,1); return false}
   if(ctrl && shft && key==219){viewVietX(el,key,3); return false} // \?
-  if(ctrl && key==219){viewVietX(el,key,1); return false} // \ß special 
+  if(ctrl && key==219){viewVietX(el,key,1); return false} // \ÃŸ special 
   if(ctrl && shft && key==187){viewVietX(el,key,3); return false} // *
   if(ctrl && key==187){viewVietX(el,key,1); return false} // +
   if(ctrl && shft && key==191){viewVietX(el,key,3); return false} // \'
@@ -1309,7 +1309,7 @@ function FKDown()
   if(ctrl && shft && key==221){viewVietX(el,key,3); return false}
   if(ctrl && key==221){viewVietX(el,key,1); return false}
   if(ctrl && shft && key==219){viewVietX(el,key,3); return false} // \?
-  if(ctrl && key==219){viewVietX(el,key,1); return false} // \ß special 
+  if(ctrl && key==219){viewVietX(el,key,1); return false} // \ÃŸ special 
   if(ctrl && shft && key==187){viewVietX(el,key,3); return false} // *
   if(ctrl && key==187){viewVietX(el,key,1); return false} // +
   if(ctrl && shft && key==191){viewVietX(el,key,3); return false} // \'
@@ -1400,7 +1400,7 @@ var hmenu;
 
 function notWord(cc)
 {
- return ("\ \r\n#,\\;.:-_()<>+-*/=?!\"§$%{}[]\'~|^°€ß²³\@\&´`0123456789".indexOf(cc)>=0);
+ return ("\ \r\n#,\\;.:-_()<>+-*/=?!\"Â§$%{}[]\'~|^Â°â‚¬ÃŸÂ²Â³\@\&Â´`0123456789".indexOf(cc)>=0);
 }
 
 

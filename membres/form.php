@@ -1,4 +1,4 @@
-<?php include ("../aqua_haut.htm"); 
+﻿<?php include ("../aqua_haut.htm"); 
 
 ?>
 <b>Inscription</b> --- <a href=../index.php><font size=2 color=green><b>Menu principal</b></font></a><br><br>
@@ -12,7 +12,7 @@
 								?>
 							</td>
 							<td colspan=2 height="5%" valign="bottom" align="left">
-								<font color=red size=2><i>PS : Vous devez imp�rativement choisir<br>un parent dans la liste</i></font>
+								<font color=red size=2><i>PS : Vous devez impérativement choisir<br>un parent dans la liste</i></font>
 							</td>
 							</tr>
 							<tr>

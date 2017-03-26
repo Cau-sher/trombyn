@@ -1,9 +1,9 @@
 
 <body bgcolor="#C0C0C0">
-<b><font color=red>Inscription terminée</font></b></a><br><br>
+<b><font color=red>Inscription terminÃ©e</font></b></a><br><br>
 
 <?php
-$Id = $HTTP_COOKIE_VARS['Id'];
+$Id = $_COOKIE['Id'];
 
 if ($Id=='OKDAK') {
 
@@ -12,24 +12,24 @@ include ("../../conex.inc");
 include ("fonctions.inc");
 require ("../../config_log.inc");
 
-$sexe = getHTTPVars("sexe", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$nom = getHTTPVars("nom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$prenom = getHTTPVars("prenom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$adresse = getHTTPVars("adresse", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$cp = getHTTPVars("cp", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$ville = getHTTPVars("ville", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$naiss = getHTTPVars("naiss", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$mail = getHTTPVars("mail", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$fone = getHTTPVars("fone", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$activ = getHTTPVars("activ", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$autre = getHTTPVars("autre", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$pass = getHTTPVars("pass", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$id_key_refinscript = getHTTPVars('id_key_refinscript', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$lefic = getHTTPVars('lefic', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$id_key_conjoint = getHTTPVars('id_key_conjoint', $HTTP_POST_VARS, $HTTP_GET_VARS);
+$sexe = getHTTPVars("sexe", $_POST, $_GET);
+$nom = getHTTPVars("nom", $_POST, $_GET);
+$prenom = getHTTPVars("prenom", $_POST, $_GET);
+$adresse = getHTTPVars("adresse", $_POST, $_GET);
+$cp = getHTTPVars("cp", $_POST, $_GET);
+$ville = getHTTPVars("ville", $_POST, $_GET);
+$naiss = getHTTPVars("naiss", $_POST, $_GET);
+$mail = getHTTPVars("mail", $_POST, $_GET);
+$fone = getHTTPVars("fone", $_POST, $_GET);
+$activ = getHTTPVars("activ", $_POST, $_GET);
+$autre = getHTTPVars("autre", $_POST, $_GET);
+$pass = getHTTPVars("pass", $_POST, $_GET);
+$id_key_refinscript = getHTTPVars('id_key_refinscript', $_POST, $_GET);
+$lefic = getHTTPVars('lefic', $_POST, $_GET);
+$id_key_conjoint = getHTTPVars('id_key_conjoint', $_POST, $_GET);
 
 
-	//INSERT dans la table coordonnées
+	//INSERT dans la table coordonnÃ©es
 	$sqlInsert="INSERT INTO `coordonnees` (`sexe`, `nom`, `prenom`, `adresse`, `cp`, `ville`, `fone`, `naiss`, `mail`, `pass`, `activ`, `autre`, `photo`) VALUES ('$sexe', '$nom', '$prenom', '$adresse', '$cp', '$ville', '$fone', '$naiss', '$mail', '$pass', '$activ', '$autre', '$lefic')";
 	//echo $sqlInsert."<br><br>";
 	
@@ -37,7 +37,7 @@ $id_key_conjoint = getHTTPVars('id_key_conjoint', $HTTP_POST_VARS, $HTTP_GET_VAR
 	mysql_query($result);
 
 	
-	//récupération de la génération du ref_inscript
+	//rÃ©cupÃ©ration de la gÃ©nÃ©ration du ref_inscript
 	$Sqllist="SELECT * FROM coordonnees AS coor, identifiant AS ident WHERE coor.id_key = ident.id_key_pere";
 
 	$Resultlist = mysql_query($Sqllist,$conexion);
@@ -48,7 +48,7 @@ $id_key_conjoint = getHTTPVars('id_key_conjoint', $HTTP_POST_VARS, $HTTP_GET_VAR
 	}
 	
 		
-	//récupération de l'Id_key pour avoir le même dans la table identifiant
+	//rÃ©cupÃ©ration de l'Id_key pour avoir le mÃªme dans la table identifiant
 	$sqlRecupId="SELECT * FROM coordonnees WHERE nom='$nom' AND prenom='$prenom'";
 	//echo $sqlRecupId."<br><br>";
 
@@ -92,15 +92,15 @@ $n="Tr@mbyn";
 $m="webmaster@webmaster.fr";
 $nT=$nom;
 $mT=$mail;
-$sujet="Bienvenue%20sur%20la%20généalogie";
-$body="Vous venez de vous inscrire dans la généalogie\nNom : ".$nom."\nPrenom : ".$prenom."\nMot de passe : ".$pass."\nMail : ".$mail."\nRappel : \nLogin du site : ".$loginmemb."\nMot de passe du site : ".$passmemb."\nadresse internet";
+$sujet="Bienvenue%20sur%20la%20gÃ©nÃ©alogie";
+$body="Vous venez de vous inscrire dans la gÃ©nÃ©alogie\nNom : ".$nom."\nPrenom : ".$prenom."\nMot de passe : ".$pass."\nMail : ".$mail."\nRappel : \nLogin du site : ".$loginmemb."\nMot de passe du site : ".$passmemb."\nadresse internet";
 
 function sendMail($n,$m,$nT,$mT,$sujet,$body) {
-   // l'émetteur
+   // l'Ã©metteur
    if ($mT<>"") {   
 	   $tete = "From: ".$n." <".$m.">\n";
 	   $tete .= "Reply-To: ".$m."\n";
-	   // et zou... false si erreur d'émission
+	   // et zou... false si erreur d'Ã©mission
 	   return mail($nT." <".$mT.">",$sujet,$body,$tete);
    }
 }
@@ -109,8 +109,8 @@ function sendMail($n,$m,$nT,$mT,$sujet,$body) {
 
 
 ?>
-<H1><align=center><font color=red> Vous êtes bien enregistré.... vous allez recevoir un mail de confirmation !<br><br><br>
-<h4>Vous pouvez maintenant fermer cette fenêtre
+<H1><align=center><font color=red> Vous Ãªtes bien enregistrÃ©.... vous allez recevoir un mail de confirmation !<br><br><br>
+<h4>Vous pouvez maintenant fermer cette fenÃªtre
 
 	<?php 
 include ("../../aqua_bas.htm"); 

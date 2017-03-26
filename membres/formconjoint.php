@@ -1,4 +1,4 @@
-
+ï»¿
 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
   <tr>
 <td width="50%" bgcolor="#CCCCCC"><font color="red">*</font>Sexe</td>
@@ -33,11 +33,11 @@
     <td width="50%" bgcolor="#CDCDCD"><input type="text" value="<?php echo $mail; ?>" name="mailC"></td>
   </tr>
   <tr>
-    <td width="50%">Téléphone</td>
+    <td width="50%">TÃ©lÃ©phone</td>
     <td width="50%"><input type="text" value="<?php echo $fone; ?>" name="foneC"></td>
   </tr>
   <tr>
-    <td width="50%" bgcolor="#CDCDCD">Activité</td>
+    <td width="50%" bgcolor="#CDCDCD">ActivitÃ©</td>
     <td width="50%" bgcolor="#CDCDCD"><input type="text" value="" name="activC"></td>
   </tr>
   <tr>

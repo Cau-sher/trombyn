@@ -1,4 +1,4 @@
-/************************************
+﻿/************************************
 * CopyRight by VietDev 2002 (GPL)
 * http://vietdev.sourceforge.net
 * please fairplay to let the notice in tact

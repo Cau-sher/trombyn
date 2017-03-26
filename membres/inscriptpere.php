@@ -1,4 +1,4 @@
-<?php
+Ôªø<?php
 
 	require ("fonctions.inc");
 	include ("../conex.inc");
@@ -18,7 +18,7 @@
 		
 		<?php
 
-//vÈrification de quelqu'un dÈj‡ inscrit sous ce nom
+//v√©rification de quelqu'un d√©j√† inscrit sous ce nom
 $SqlVerif="SELECT * FROM coordonnees WHERE nom='$nom' AND prenom='$prenom'";
 $ResultVerif = mysql_query($SqlVerif,$conexion);
 mysql_query($ResultVerif);
@@ -30,9 +30,9 @@ mysql_query($ResultVerif);
 if ($VidePlein=="") {
 		
 		if ($couple=="S") {
-			$raizon = "CÈlibatiare";
+			$raizon = "C√©libatiare";
 		} else {
-			$raizon = "mariÈ ou en couple";
+			$raizon = "mari√© ou en couple";
 		}
 		
 $chaine = "Sexe : ".$sexe
@@ -43,12 +43,12 @@ $chaine = "Sexe : ".$sexe
 		."<br>Ville : ".$ville
 		."<br>Date de naissance : ".$naiss
 		."<br>E_Mail : <a href=mailto:".$mail.">".$mail."</a>"
-		."<br>TÈlÈphone : ".$fone
-		."<br>ActivitÈ : ".$activ
+		."<br>T√©l√©phone : ".$fone
+		."<br>Activit√© : ".$activ
 		."<br>Autre : ".$autre
 		."<i><b><br>Mot de passe : ".$pass."</b></i>"
 		."<br>Raison sociale : ".$raizon
-		."<br>Epoux/Èpouse de  : ".$nomC;
+		."<br>Epoux/√©pouse de  : ".$nomC;
 		
 		echo $chaine;
 
@@ -60,12 +60,12 @@ $chaine2 = "Sexe : ".$sexeC
 		."<br>Ville : ".$villeC
 		."<br>Date de naissance : ".$naissC
 		."<br>E_Mail : <a href=mailto:".$mailC.">".$mailC."</a>"
-		."<br>TÈlÈphone : ".$foneC
-		."<br>ActivitÈ : ".$activC
+		."<br>T√©l√©phone : ".$foneC
+		."<br>Activit√© : ".$activC
 		."<br>Autre : ".$autreC
 		."<i><b><br>Mot de passe : ".$passC."</b></i>"
 		."<br>Raison sociale : ".$raizonC
-		."<br>Epoux/Èpouse de  : ".$nom;
+		."<br>Epoux/√©pouse de  : ".$nom;
 		
 	$lefic=strrchr($userfile,"\\");
 	$lefic=substr($lefic,1);
@@ -79,7 +79,7 @@ $chaine2 = "Sexe : ".$sexeC
 	mysql_query($result2);
 	//echo $sqlInsert2;
 	
-//ajout enregistrement du conjoint dans coordonnees si mariÈ
+//ajout enregistrement du conjoint dans coordonnees si mari√©
 if ($couple=="C") {
 	$sqlInsert3="INSERT INTO `coordonnees` (`sexe`, `nom`, `prenom`, `adresse`, `cp`, `ville`, `fone`, `naiss`, `mail`, `pass`, `activ`, `autre`) VALUES ('$sexeC', '$nomC', '$prenomC', '$adresseC', '$cpC', '$villeC', '$foneC', '$naissC', '$mailC', '$passC', '$activC','$autreC')";
 	$result3 = mysql_query($sqlInsert3,$conexion);
@@ -122,9 +122,9 @@ if ($couple=="C") {
 	$result4 = mysql_query($sqlInsert4,$conexion);
 	mysql_query($result4);
 }
-// demande si la mËre est deja inscrite
+// demande si la m√®re est deja inscrite
 ?>
-<hr>Votre mËre est-elle dans la liste ?
+<hr>Votre m√®re est-elle dans la liste ?
 <form action="mere_update.php" method="post">
 <?php
  ListFemmeInscrits($login,$conexion);
@@ -136,7 +136,7 @@ if ($couple=="C") {
  <?php
 //si qlq1 deja inscrit sous ce nom/prenom
 } else {
-	echo "<b><font color=red>Apparement tu es dÈj‡ inscrit</font></b><br><a href=\"indexMF.php?login=";
+	echo "<b><font color=red>Apparement tu es d√©j√† inscrit</font></b><br><a href=\"indexMF.php?login=";
 	echo $login;
 	echo "\">Retour</a>";
 }	

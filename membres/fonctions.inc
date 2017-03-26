@@ -1,6 +1,6 @@
-<?php
+ï»¿<?php
 
-//récupérations des variables
+//rÃ©cupÃ©rations des variables
 function getHTTPVars($name, $POST, $GET) {
  $value='';    
  if (isset($POST[$name])) {
@@ -14,7 +14,7 @@ function getHTTPVars($name, $POST, $GET) {
 }
 
 
-//récupère la liste des inscrits dans la généalogie définie par $login
+//rÃ©cupÃ¨re la liste des inscrits dans la gÃ©nÃ©alogie dÃ©finie par $login
 function ListInscrits($login,$conexion) {
 	//$conlist = mysql_connect('localhost','callnet','bpbm00');
 	mysql_select_db($login,$conexion);
@@ -87,17 +87,17 @@ function ListEpoux($login,$conexion) {
 	echo "</select>";
 }
 
-//boutons radio pour liens de parenté à la généalogie
+//boutons radio pour liens de parentÃ© Ã  la gÃ©nÃ©alogie
 function ChoixReferantInscript() {
 	?>
 		est<br>
-		mon père <input type="radio" name="RefInscript" value="pere" checked><br>
-		ma mère <input type="radio" name="RefInscript" value="mere"><br>
+		mon pÃ¨re <input type="radio" name="RefInscript" value="pere" checked><br>
+		ma mÃ¨re <input type="radio" name="RefInscript" value="mere"><br>
 		mon conjoint <input type="radio" name="RefInscript" value="conjoint"><br>
 		<!--mon enfant <input type="radio" name="RefInscript" value="enfant"><br>
 		mon/ma cousin(e) <input type="radio" name="RefInscript" value="cousin"><br>
-		mon grand-père <input type="radio" name="RefInscript" value="gmere"><br>
-		ma grand-mère <input type="radio" name="RefInscript" value="gpere"><br>-->
+		mon grand-pÃ¨re <input type="radio" name="RefInscript" value="gmere"><br>
+		ma grand-mÃ¨re <input type="radio" name="RefInscript" value="gpere"><br>-->
 	<?php
 }	
 
@@ -107,18 +107,18 @@ function FormulaireInscript($login,$conexion) {
 	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
 <tr>
     <td width="50%" bgcolor="#CCCCCC"><div id="menu1" onclick="showhide(menu1in, menu1out)">
-    			<input type="radio" checked name="couple" value="S"> célibataire</div>
+    			<input type="radio" checked name="couple" value="S"> cÃ©libataire</div>
     </td>
     <td width="50%" bgcolor="#CCCCCC"><div id="menu1" onclick="showhide(menu1in, menu1out)">
-			    <input type="radio" value="C"  name="couple" id="menu1out"> marié ou en couple</div>
+			    <input type="radio" value="C"  name="couple" id="menu1out"> mariÃ© ou en couple</div>
 	</td>
 	<td width="10" bgcolor="green" rowspan="14">&nbsp;&nbsp;</td>
     <td width="34%" rowspan="14">
 				<span id="menu1in" style="display:'none'">
-				<div><b><font color=red>Remplir les données du conjoint</font></b>
-				<p><b>Quelqu'un d'enregistré<br><?php ListEpoux($login,$conexion); ?><br><br>
+				<div><b><font color=red>Remplir les donnÃ©es du conjoint</font></b>
+				<p><b>Quelqu'un d'enregistrÃ©<br><?php ListEpoux($login,$conexion); ?><br><br>
 				<font color="red"><b>ou</b></font><br><br>
-				Quelqu'un pas encore enregistré :</b><br><?php include('formconjoint.php'); ?></div>
+				Quelqu'un pas encore enregistrÃ© :</b><br><?php include('formconjoint.php'); ?></div>
 	   
     </td>
 <tr>
@@ -156,11 +156,11 @@ function FormulaireInscript($login,$conexion) {
     <td width="50%" bgcolor="#CDCDCD"><input type="text" value="" name="mail"></td>
   </tr>
   <tr>
-    <td width="50%">Téléphone</td>
+    <td width="50%">TÃ©lÃ©phone</td>
     <td width="50%"><input type="text" value="" name="fone"></td>
   </tr>
   <tr>
-    <td width="50%" bgcolor="#CDCDCD">Activité</td>
+    <td width="50%" bgcolor="#CDCDCD">ActivitÃ©</td>
     <td width="50%" bgcolor="#CDCDCD"><input type="text" value="" name="activ"></td>
   </tr>
   <tr>
@@ -176,7 +176,7 @@ function FormulaireInscript($login,$conexion) {
     
 <input type=hidden name="max_file_size" value="256000">
 	Photo <input type=file name="userfile"><br>
-<font color=red size=1><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractères spéciaux et doit peser moins de 256Ko</i></font>
+<font color=red size=1><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractÃ¨res spÃ©ciaux et doit peser moins de 256Ko</i></font>
 </td>
     <td width="50%" valign="top"></td>
   </tr>  <tr>

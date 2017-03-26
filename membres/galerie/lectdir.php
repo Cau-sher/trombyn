@@ -52,7 +52,7 @@ close();
 </script>
 
 <?php
-$Id = $HTTP_COOKIE_VARS['Id'];
+$Id = $_COOKIE['Id'];
 	
 if ($Id=='OKDAK') {
 
@@ -102,5 +102,5 @@ include("../aqua_bas.htm");
 
 
 } else {
-	echo "non autorisé";
+	echo "non autorisÃ©";
 }?>

@@ -1,6 +1,6 @@
-<?php
+ï»¿<?php
 
-//récupère la liste des inscrits dans la généalogie définie par $login
+//rÃ©cupÃ¨re la liste des inscrits dans la gÃ©nÃ©alogie dÃ©finie par $login
 function ListInscrits($login,$conexion) {
 	//$conlist = mysql_connect('localhost','callnet','bpbm00');
 	mysql_select_db($login,$conexion);
@@ -55,17 +55,17 @@ function ListEpoux($login,$conexion) {
 	echo "</select>";
 }
 
-//boutons radio pour liens de parenté à la généalogie
+//boutons radio pour liens de parentÃ© Ã  la gÃ©nÃ©alogie
 function ChoixReferantInscript() {
 	?>
 		est<br>
-		mon père <input type="radio" name="RefInscript" value="pere" checked><br>
-		ma mère <input type="radio" name="RefInscript" value="mere"><br>
+		mon pÃ¨re <input type="radio" name="RefInscript" value="pere" checked><br>
+		ma mÃ¨re <input type="radio" name="RefInscript" value="mere"><br>
 		mon fils <input type="radio" name="RefInscript" value="fils"><br>
 		ma fille <input type="radio" name="RefInscript" value="fille"><br>
 		mon/ma cousin(e) <input type="radio" name="RefInscript" value="cousin"><br>
-		mon grand-père <input type="radio" name="RefInscript" value="gmere"><br>
-		ma grand-mère <input type="radio" name="RefInscript" value="gpere"><br>
+		mon grand-pÃ¨re <input type="radio" name="RefInscript" value="gmere"><br>
+		ma grand-mÃ¨re <input type="radio" name="RefInscript" value="gpere"><br>
 	<?php
 }	
 
@@ -77,16 +77,16 @@ function FormulaireInscript($login,$conexion) {
     <td width="50%" bgcolor="#CCCCCC"><font color="red">*</font>Sexe</td>
     <td width="50%" bgcolor="#CCCCCC">M<input type="radio" name="sexe" value="M" checked>/ F<input type="radio" name="sexe" value="F"></td>
     <td width="34%" rowspan="13">
-			<input type="radio" checked name="couple" value="S"> célibataire
+			<input type="radio" checked name="couple" value="S"> cÃ©libataire
 			     
 			    <div id="menu1" onclick="showhide(menu1in, menu1out)">
-			    <input type="radio" value="C"  name="couple" id="menu1out"> marié ou en couple
+			    <input type="radio" value="C"  name="couple" id="menu1out"> mariÃ© ou en couple
 			    </div>
 			    
 				<span id="menu1in" style="display:'none'">
-				<div><p><b>Quelqu'un d'enregistré<br><?php ListEpoux($login,$conexion); ?><br><br>
+				<div><p><b>Quelqu'un d'enregistrÃ©<br><?php ListEpoux($login,$conexion); ?><br><br>
 				<font color="red"><b>ou</b></font><br><br>
-				Quelqu'un pas encore enregistré :</b><br><?php include('formconjoint.php'); ?></div>
+				Quelqu'un pas encore enregistrÃ© :</b><br><?php include('formconjoint.php'); ?></div>
 	   
     </td>
 
@@ -120,11 +120,11 @@ function FormulaireInscript($login,$conexion) {
     <td width="50%" bgcolor="#CDCDCD"><input type="text" value="" name="mail"></td>
   </tr>
   <tr>
-    <td width="50%">Téléphone</td>
+    <td width="50%">TÃ©lÃ©phone</td>
     <td width="50%"><input type="text" value="" name="fone"></td>
   </tr>
   <tr>
-    <td width="50%" bgcolor="#CDCDCD">Activité</td>
+    <td width="50%" bgcolor="#CDCDCD">ActivitÃ©</td>
     <td width="50%" bgcolor="#CDCDCD"><input type="text" value="" name="activ"></td>
   </tr>
   <tr>

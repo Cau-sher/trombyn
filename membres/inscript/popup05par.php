@@ -1,10 +1,10 @@
 <body bgcolor="#C0C0C0">
 
 
-<b><font color=red>Inscription --- étape 3/4</font></b></a><br><br>
+<b><font color=red>Inscription --- Ã©tape 3/4</font></b></a><br><br>
 
 <?php
-$Id = $HTTP_COOKIE_VARS['Id'];
+$Id = $_COOKIE['Id'];
 
 if ($Id=='OKDAK') {
 
@@ -12,39 +12,39 @@ include ("../../aqua_haut.htm");
 include ("../../conex.inc");
 include ("fonctions.inc");
 
-$userfile = $HTTP_POST_FILES['userfile']['tmp_name'];
-$userfile_name = $HTTP_POST_FILES['userfile']['name'];
+$userfile = $_POST['userfile']['tmp_name'];
+$userfile_name = $_POST['userfile']['name'];
 $userfile_name = str_replace(" ","_",$userfile_name);
 
-	//on vérifie que la photo comporte bien une extension jpg ou gif
+	//on vÃ©rifie que la photo comporte bien une extension jpg ou gif
 	if(!ereg(".gif$", $userfile_name) && !ereg(".jpg$", $userfile_name))
 	{
 	    $userfile="";
 	    $userfile_name="";
-	    echo "<font color=green><b><i>Format de photo incorrecte, elle ne sera pas enregistrée !</i></b></font><br>";
+	    echo "<font color=green><b><i>Format de photo incorrecte, elle ne sera pas enregistrÃ©e !</i></b></font><br>";
 	}
 
 
-$sexe = getHTTPVars("sexe", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$nom = getHTTPVars("nom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$prenom = getHTTPVars("prenom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$adresse = getHTTPVars("adresse", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$cp = getHTTPVars("cp", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$ville = getHTTPVars("ville", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$jnaiss = getHTTPVars("jnaiss", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$mnaiss = getHTTPVars("mnaiss", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$anaiss = getHTTPVars("anaiss", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$mail = getHTTPVars("mail", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$fone = getHTTPVars("fone", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$activ = getHTTPVars("activ", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$autre = getHTTPVars("autre", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$pass = getHTTPVars("pass", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$id_key_pere = getHTTPVars('id_key_pere', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$id_key_mere = getHTTPVars('id_key_mere', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$id_key_refinscript = getHTTPVars('id_key_refinscript', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$login= getHTTPVars("login", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$infos= getHTTPVars("infos", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$id_key_conjoint= getHTTPVars("id_key_conjoint", $HTTP_POST_VARS, $HTTP_GET_VARS);
+$sexe = getHTTPVars("sexe", $_POST, $_GET);
+$nom = getHTTPVars("nom", $_POST, $_GET);
+$prenom = getHTTPVars("prenom", $_POST, $_GET);
+$adresse = getHTTPVars("adresse", $_POST, $_GET);
+$cp = getHTTPVars("cp", $_POST, $_GET);
+$ville = getHTTPVars("ville", $_POST, $_GET);
+$jnaiss = getHTTPVars("jnaiss", $_POST, $_GET);
+$mnaiss = getHTTPVars("mnaiss", $_POST, $_GET);
+$anaiss = getHTTPVars("anaiss", $_POST, $_GET);
+$mail = getHTTPVars("mail", $_POST, $_GET);
+$fone = getHTTPVars("fone", $_POST, $_GET);
+$activ = getHTTPVars("activ", $_POST, $_GET);
+$autre = getHTTPVars("autre", $_POST, $_GET);
+$pass = getHTTPVars("pass", $_POST, $_GET);
+$id_key_pere = getHTTPVars('id_key_pere', $_POST, $_GET);
+$id_key_mere = getHTTPVars('id_key_mere', $_POST, $_GET);
+$id_key_refinscript = getHTTPVars('id_key_refinscript', $_POST, $_GET);
+$login= getHTTPVars("login", $_POST, $_GET);
+$infos= getHTTPVars("infos", $_POST, $_GET);
+$id_key_conjoint= getHTTPVars("id_key_conjoint", $_POST, $_GET);
 
 
 
@@ -65,9 +65,9 @@ if ($userfile<>"") {
 
 	
 if ($sexe=="M") {
-	$txt="le père";
+	$txt="le pÃ¨re";
 } else {
-	$txt="la mère";
+	$txt="la mÃ¨re";
 }
 echo $id_key_conjoint;
 	mysql_select_db($login,$conexion);
@@ -75,7 +75,7 @@ echo $id_key_conjoint;
 					$Resultlist = mysql_query($Sqllist,$conexion);
 					mysql_query($Resultlist);
 					while($Vallist=mysql_fetch_array($Resultlist)){
-						echo "<b><font color=red>Vous ètes ".$txt." de ".$Vallist["prenom"]." ".$Vallist["nom"]."</font></b><br>";
+						echo "<b><font color=red>Vous Ã¨tes ".$txt." de ".$Vallist["prenom"]." ".$Vallist["nom"]."</font></b><br>";
 					}
 
 echo "<br>sexe : ".$sexe;

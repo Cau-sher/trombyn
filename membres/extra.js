@@ -1,4 +1,4 @@
-/* DIALOG POPWIN **/
+﻿/* DIALOG POPWIN **/
 function formatDialogF()
 {
   var y = screen.height -parseInt('30em')*14 - 30 

@@ -1,4 +1,4 @@
-/*** Freeware Open Source writen by ngoCanh 2002-05                  */
+﻿/*** Freeware Open Source writen by ngoCanh 2002-05                  */
 /*** Original by Vietdev  http://vietdev.sourceforge.net             */
 /*** Release 2002-11-02  R6.0                                        */
 /*** GPL - Copyright protected                                       */
@@ -230,7 +230,7 @@ input.vdev {font-family:arial; font-size:12; height:20; background:#a0a080; colo
 str += "<TR bgColor=#a0a080 valign=middle align=center EVENT>\
 <TD nowrap style='cursor:hand'>\
 <SELECT name='QBCNTRL1' class=vdev onchange='doFormatF(\"FontName,\"+this.value)' style='width:120'>\
-<OPTION value=''>Police par d�faut\
+<OPTION value=''>Police par défaut\
 <OPTION value='Arial'>Arial\
 <OPTION value='Times New Roman'>Times New Roman\
 <OPTION value='Webdings'>Webdings\

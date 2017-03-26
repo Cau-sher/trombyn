@@ -14,7 +14,7 @@ function testform(nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
         return false
     }
     if(prenom.value=="") {
-        alert("Veuillez saisir votre prénom"); 
+        alert("Veuillez saisir votre prÃ©nom"); 
         prenom.focus();
         return false
     }
@@ -29,7 +29,7 @@ function testform(nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
         return false
     }
     if(anaiss.value=="") {
-        alert("Veuillez saisir votre année de naissance"); 
+        alert("Veuillez saisir votre annÃ©e de naissance"); 
         anaiss.focus();
         return false
     }
@@ -50,10 +50,10 @@ function testform(nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
 
 
 <body bgcolor="#C0C0C0">
-<b><font color=red>Inscription --- étape 3/4</font></b></a><br><br>
+<b><font color=red>Inscription --- Ã©tape 3/4</font></b></a><br><br>
 
 <?php
-$Id = $HTTP_COOKIE_VARS['Id'];
+$Id = $_COOKIE['Id'];
 
 if ($Id=='OKDAK') {
 
@@ -61,11 +61,11 @@ include ("../../aqua_haut.htm");
 include ("../../conex.inc");
 include ("fonctions.inc");
 
-$id_key_femme = getHTTPVars('id_key_femme', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$id_key_homme = getHTTPVars('id_key_homme', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$sex_refinscript = getHTTPVars('sex_refinscript', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$id_key_refinscript = getHTTPVars('id_key_refinscript', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$login= getHTTPVars("login", $HTTP_POST_VARS, $HTTP_GET_VARS);
+$id_key_femme = getHTTPVars('id_key_femme', $_POST, $_GET);
+$id_key_homme = getHTTPVars('id_key_homme', $_POST, $_GET);
+$sex_refinscript = getHTTPVars('sex_refinscript', $_POST, $_GET);
+$id_key_refinscript = getHTTPVars('id_key_refinscript', $_POST, $_GET);
+$login= getHTTPVars("login", $_POST, $_GET);
 
 ?>
 
@@ -91,7 +91,7 @@ $login= getHTTPVars("login", $HTTP_POST_VARS, $HTTP_GET_VARS);
 //echo "<br>id_key_pere : ".$id_key_pere;
 
 	
-	echo "<b><font color=red>Vous êtes le fils/la fille de ";
+	echo "<b><font color=red>Vous Ãªtes le fils/la fille de ";
 	CoorRef($login,$conexion,$id_key_refinscript);
 	if ($id_key_femme=="" and $id_key_homme=="") {
 		
@@ -128,7 +128,7 @@ FormulaireInscript($login,$conexion);
 	Photo <input type=file name="userfile"><br><br>
 
 	
-<font color=purple size=2><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractères spéciaux et doit peser moins d'1Mo</i></font>
+<font color=purple size=2><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractÃ¨res spÃ©ciaux et doit peser moins d'1Mo</i></font>
 
 		<input type="hidden" name="id_key_mere" value="<?php echo $id_key_mere; ?>">
 		<input type="hidden" name="id_key_pere" value="<?php echo $id_key_pere; ?>">

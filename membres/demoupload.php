@@ -1,9 +1,9 @@
-<HTML><BODY><CENTER>
+ï»¿<HTML><BODY><CENTER>
 
 <?
 // Taille max des fichiers (octets)
 $MFS=1024000;
-// Répertoire de stockage
+// RÃ©pertoire de stockage
 $rep="upload/";
 
 if(isset($_FILES['userfile'])) {
@@ -11,7 +11,7 @@ if($_FILES['userfile']['size']>0) {
    $savefile= $rep.$_FILES['userfile']['name'];
    $temp = $_FILES['userfile']['tmp_name'];
    if (move_uploaded_file($temp, $savefile)) { ?>
-      <b>Votre fichier a bien été enregistré !</b>
+      <b>Votre fichier a bien Ã©tÃ© enregistrÃ© !</b>
 <BR>Nom : <?echo $_FILES['userfile']['name'];?>
 <BR>Taille : <?echo $_FILES['userfile']['size'];?> o
 <BR>Type : <?echo $_FILES['userfile']['type'];?>

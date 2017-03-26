@@ -1,5 +1,5 @@
 <?php
-$Id = $HTTP_COOKIE_VARS['Id'];
+$Id = $_COOKIE['Id'];
 
 if ($Id=='OKDAK') {
 
@@ -9,7 +9,7 @@ include ("fonctions.inc");
 
 
 ?>
-<b>Inscription --- étape 3/4</b></a><br><br>
+<b>Inscription --- Ã©tape 3/4</b></a><br><br>
 	<form method="POST" action="popup04.php">
 <?php
 

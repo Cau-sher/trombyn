@@ -12,14 +12,14 @@ function getHTTPVars($name, $POST, $GET) {
 }	
 
 include ("../conex.inc");
-	$ModifPass= getHTTPVars("ModifPass", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$ModifId= getHTTPVars("ModifId", $HTTP_POST_VARS, $HTTP_GET_VARS);
+	$ModifPass= getHTTPVars("ModifPass", $_POST, $HTTP_GET_VARS);
+	$ModifId= getHTTPVars("ModifId", $_POST, $HTTP_GET_VARS);
 
 	
 include ("../aqua_haut.htm");
 	
 	?>
-<html><head><title>Modifier ses coordonnées</title></head>
+<html><head><title>Modifier ses coordonnÃ©es</title></head>
 
 
 
@@ -37,7 +37,7 @@ if (mysql_query($query,$conexion)) {
 	$result = mysql_query($query,$conexion);
 	//echo $result;
 	if (mysql_num_rows($result)==0) {
-		echo "Mot de passe incorrect, vous pouvez fermer cette fenêtre<br><a href=\"javascript:window.close();\">Fermer</a>";
+		echo "Mot de passe incorrect, vous pouvez fermer cette fenÃªtre<br><a href=\"javascript:window.close();\">Fermer</a>";
 	}
 	
 	while ($val = mysql_fetch_array($result)) { 
@@ -91,7 +91,7 @@ if (mysql_query($query,$conexion)) {
 	Photo <input type=file name="userfile"><br><br>
 
 	
-<font color=purple size=2><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractères spéciaux et doit peser moins d'1Mo</i></font>
+<font color=purple size=2><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractÃ¨res spÃ©ciaux et doit peser moins d'1Mo</i></font>
 	
 			
 

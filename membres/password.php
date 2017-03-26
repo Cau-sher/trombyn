@@ -14,7 +14,7 @@ function testform(nom,prenom,mail) {
         return false
     }
     if(prenom.value=="") {
-        alert("Veuillez saisir votre prénom"); 
+        alert("Veuillez saisir votre prÃ©nom"); 
         prenom.focus();
         return false
     }
@@ -32,10 +32,10 @@ function testform(nom,prenom,mail) {
 <?php
 	require ("fonctions.inc");
 
-$mail = getHTTPVars("mail", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$err = getHTTPVars("err", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$prenom = getHTTPVars("prenom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$nom = getHTTPVars("nom", $HTTP_POST_VARS, $HTTP_GET_VARS);
+$mail = getHTTPVars("mail", $_POST, $HTTP_GET_VARS);
+$err = getHTTPVars("err", $_POST, $HTTP_GET_VARS);
+$prenom = getHTTPVars("prenom", $_POST, $HTTP_GET_VARS);
+$nom = getHTTPVars("nom", $_POST, $HTTP_GET_VARS);
 
 include ("../aqua_haut.htm"); 
 
@@ -70,10 +70,10 @@ if ($mail<>'') {
 	if ($lemail<>"") {		
 		$lemail;
 		$subject='Votre mot de passe';
-		$body='Votre mot de passe est \n<b>'.$lepass.'\n</b>. Ne le donnez à personne !';
+		$body='Votre mot de passe est \n<b>'.$lepass.'\n</b>. Ne le donnez Ã  personne !';
 		$expediteur="ozitoun@free.fr";
 
-		echo "Email envoyé à : $lemail<br>";
+		echo "Email envoyÃ© Ã  : $lemail<br>";
 	mail($lemail, $subject, $body,'Reply-To: ozitoun@free.fr');
 	} else {
 		echo "<font color=red>Identification incorrecte</font>";
@@ -94,7 +94,7 @@ if ($mail<>'') {
 			echo "<div align = right>Login ou mot de passe incorrect</div>";
 		} ?>
 		
-		Prénom<br>
+		PrÃ©nom<br>
 		<input type="text" size="10" value="" name="prenom"><br>
 		Nom<br>
 		<input type="text" size="10" value="" name="nom"><br>

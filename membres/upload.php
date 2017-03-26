@@ -1,4 +1,4 @@
-<?
+﻿<?
 // ********  CONFIGURATION BEGIN
 $filesize= "50000"; //size limit in bytes;
 $pooldir= "./uploads"; //always relative to upload.php

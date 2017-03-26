@@ -1,4 +1,4 @@
-function setPointer(theRow, theAction, theDefaultColor, thePointerColor, theMarkColor)
+﻿function setPointer(theRow, theAction, theDefaultColor, thePointerColor, theMarkColor)
 {
     var theCells = null;
 

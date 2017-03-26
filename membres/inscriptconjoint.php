@@ -1,4 +1,4 @@
-<?php
+Ôªø<?php
 	require ("fonctions.inc");
 	include ("../conex.inc");
 ?>
@@ -17,7 +17,7 @@
 		
 		<?php
 
-//vÈrification de quelqu'un dÈj‡ inscrit sous ce nom
+//v√©rification de quelqu'un d√©j√† inscrit sous ce nom
 $SqlVerif="SELECT * FROM coordonnees WHERE nom='$nom' AND prenom='$prenom'";
 $ResultVerif = mysql_query($SqlVerif,$conexion);
 mysql_query($ResultVerif);
@@ -38,8 +38,8 @@ $chaine = "Sexe : ".$sexe
 		."<br>Ville : ".$ville
 		."<br>Date de naissance : ".$naiss
 		."<br>E_Mail : <a href=mailto:".$mail.">".$mail."</a>"
-		."<br>TÈlÈphone : ".$fone
-		."<br>ActivitÈ : ".$activ
+		."<br>T√©l√©phone : ".$fone
+		."<br>Activit√© : ".$activ
 		."<br>Autre : ".$autre
 		."<i><b><br>Mot de passe : ".$pass."</b></i>"
 		."<br>Raison sociale : ".$raizon;
@@ -48,10 +48,10 @@ $chaine = "Sexe : ".$sexe
 
 		
 			
-//Enreg du nv conjoint - piËce rapportÈ
+//Enreg du nv conjoint - pi√®ce rapport√©
 
 
-		//le crÈer
+		//le cr√©er
 		$sqlInsert2="INSERT INTO `coordonnees` (`sexe`, `nom`, `prenom`, `adresse`, `cp`, `ville`, `fone`, `naiss`, `mail`, `pass`, `activ`, `autre`) VALUES ('$sexe', '$nom', '$prenom', '$adresse', '$cp', '$ville', '$fone', '$naiss', '$mail', '$pass', '$activ','$autre')";
 		$result2 = mysql_query($sqlInsert2,$conexion);
 		mysql_query($result2);
@@ -79,7 +79,7 @@ $chaine = "Sexe : ".$sexe
 
 			
 
-		//update du rÈferant, en couple et id_key du nv_conjoint
+		//update du r√©ferant, en couple et id_key du nv_conjoint
 		
 		$SqlUpdateRef = "UPDATE identifiant SET statut_social='C', id_key_epoux='$id_key_nvconjoint' WHERE id_key='$id_key_refinscript'";
 		$ResultUpdateRef = mysql_query($SqlUpdateRef,$conexion);
@@ -91,7 +91,7 @@ $chaine = "Sexe : ".$sexe
 
 //si qlq1 deja inscrit sous ce nom/prenom
 } else {
-	echo "<b><font color=red>Apparement tu es dÈj‡ inscrit</font></b><br><a href=\"indexMF.php?coordosbox=oui&trombibox=&listbox=";
+	echo "<b><font color=red>Apparement tu es d√©j√† inscrit</font></b><br><a href=\"indexMF.php?coordosbox=oui&trombibox=&listbox=";
 	echo $login;
 	echo "\">Retour</a>";
 }	

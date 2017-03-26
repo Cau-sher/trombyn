@@ -9,7 +9,7 @@ function testform(nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
         return false
     }
     if(prenom.value=="") {
-        alert("Veuillez saisir votre prénom"); 
+        alert("Veuillez saisir votre prÃ©nom"); 
         prenom.focus();
         return false
     }
@@ -24,7 +24,7 @@ function testform(nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
         return false
     }
     if(anaiss.value=="") {
-        alert("Veuillez saisir votre année de naissance"); 
+        alert("Veuillez saisir votre annÃ©e de naissance"); 
         anaiss.focus();
         return false
     }
@@ -40,29 +40,29 @@ function testform(nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
 </script>
 
 <?php
-$Id = $HTTP_COOKIE_VARS['Id'];
+$Id = $_COOKIE['Id'];
 
 if ($Id=='OKDAK') {
 
 include ("../../conex.inc");
 include ("fonctions.inc");
 
-$id_key_refinscript = getHTTPVars('id_key_refinscript', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$sexe = getHTTPVars('sexe', $HTTP_POST_VARS, $HTTP_GET_VARS);
+$id_key_refinscript = getHTTPVars('id_key_refinscript', $_POST, $_GET);
+$sexe = getHTTPVars('sexe', $_POST, $_GET);
 
 ?>	
 	<body bgcolor="#C0C0C0">
-<b><font color=red>Inscription --- étape 3/4</font></b></a><br><br>
+<b><font color=red>Inscription --- Ã©tape 3/4</font></b></a><br><br>
 
 <form method="post" action="popup05par.php" onSubmit="return testform(this.nom,this.prenom,this.jnaiss,this.mnaiss,this.anaiss,this.mail,this.pass)" enctype="multipart/form-data"> 
 
 <?php
 if ($sexe=="M") {
-	$id_key_conjoint = getHTTPVars('conjoint', $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$txt="le père";
+	$id_key_conjoint = getHTTPVars('conjoint', $_POST, $_GET);
+	$txt="le pÃ¨re";
 } else {
-	$id_key_conjoint = getHTTPVars('conjoint', $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$txt="la mère";
+	$id_key_conjoint = getHTTPVars('conjoint', $_POST, $_GET);
+	$txt="la mÃ¨re";
 }
 
 					mysql_select_db($login,$conexion);
@@ -70,7 +70,7 @@ if ($sexe=="M") {
 					$Resultlist = mysql_query($Sqllist,$conexion);
 					mysql_query($Resultlist);
 					while($Vallist=mysql_fetch_array($Resultlist)){
-						echo "Vous ètes ".$txt." de ".$Vallist["prenom"]." ".$Vallist["nom"]."<br>";
+						echo "Vous Ã¨tes ".$txt." de ".$Vallist["prenom"]." ".$Vallist["nom"]."<br>";
 					}
 
 					
@@ -86,7 +86,7 @@ FormulaireInscript($login,$conexion);
 	Photo <input type=file name="userfile"><br><br>
 
 	
-<font color=purple size=2><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractères spéciaux et doit peser moins d'1Mo</i></font>
+<font color=purple size=2><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractÃ¨res spÃ©ciaux et doit peser moins d'1Mo</i></font>
 
 		<input type="hidden" name="id_key_conjoint" value="<?php echo $id_key_conjoint; ?>">
 

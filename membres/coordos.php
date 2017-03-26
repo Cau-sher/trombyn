@@ -1,4 +1,4 @@
-<?php	include ("../aqua_haut.htm");
+ï»¿<?php	include ("../aqua_haut.htm");
 			
 	$Sqllist="SELECT * FROM coordonnees WHERE id_key='$lekey'";
 						
@@ -8,7 +8,7 @@
 			echo "<b><font color=red> Bonjour ".$Vallist["prenom"]." ".$Vallist["nom"]."</font></b>";
 			$InscriptON = $Vallist["nom"];
 		}
-		echo "<br><br><a href=modifmf.php><font size=2 color=green><b>Modifier ses coordonnées</b></font></a><br><hr>";
+		echo "<br><br><a href=modifmf.php><font size=2 color=green><b>Modifier ses coordonnÃ©es</b></font></a><br><hr>";
 		echo "<a href=../index.php><font size=2 color=green><b>Menu principal</b></font></a><br><br>";
 	} else {
 		
@@ -23,8 +23,8 @@ if ($ValConnect=="oui") {
 
 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
  <tr>
-    <td width="50%"><input type="radio" <?php if ($couple=="S") { echo "checked"; }?> name="couple" value="S"> célibataire</td>
-    <td><input type="radio" <?php if ($couple=="C") { echo "checked"; }?> value="C" name="couple"> marié ou en couple</td>
+    <td width="50%"><input type="radio" <?php if ($couple=="S") { echo "checked"; }?> name="couple" value="S"> cÃ©libataire</td>
+    <td><input type="radio" <?php if ($couple=="C") { echo "checked"; }?> value="C" name="couple"> mariÃ© ou en couple</td>
   </tr>
   <tr>
     <td width="50%"><font color="red">*</font>Sexe</td>
@@ -59,11 +59,11 @@ if ($ValConnect=="oui") {
     <td width="50%" bgcolor="#CDCDCD" align="right"><input type="text" value="<?php echo $mail; ?>" name="mail"></td>
   </tr>
   <tr>
-    <td width="50%">Téléphone</td>
+    <td width="50%">TÃ©lÃ©phone</td>
     <td width="50%" align="right"><input type="text" value="<?php echo $fone; ?>" name="fone"></td>
   </tr>
   <tr>
-    <td width="50%" bgcolor="#CDCDCD">Activité</td>
+    <td width="50%" bgcolor="#CDCDCD">ActivitÃ©</td>
     <td width="50%" bgcolor="#CDCDCD" align="right"><input type="text" value="<?php echo $activ; ?>" name="activ"></td>
   </tr>
   <tr>
@@ -77,8 +77,8 @@ if ($ValConnect=="oui") {
  
 </table>
 <br>
-<font color="red">*</font>Login la généalogie <input type="text" name="logingene" size="13" value="<?php echo $logingene; ?>"><br>
-<font color="red">*</font>Mot de passe de la généalogie <input type="password" name="passgene1" size="13" value="<?php echo $passgene1; ?>"><br>
+<font color="red">*</font>Login la gÃ©nÃ©alogie <input type="text" name="logingene" size="13" value="<?php echo $logingene; ?>"><br>
+<font color="red">*</font>Mot de passe de la gÃ©nÃ©alogie <input type="password" name="passgene1" size="13" value="<?php echo $passgene1; ?>"><br>
 <font color="red">*</font>Retapez le mot de passe <input type="password" name="passgene2" size="13" value="<?php echo $passgene2; ?>"><br>
 <input type="submit" value="<?php if ($envoi==o) { echo "Inscription Super_Admin et conjoint"; } else { echo "Inscription Super_Administrateur"; } ?>" name="creanew">
 </td>

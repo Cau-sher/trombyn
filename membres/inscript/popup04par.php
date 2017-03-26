@@ -3,7 +3,7 @@
 
 function testform(sexe,nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
     if(sexe[0].checked == false && sexe[1].checked == false) {
-        alert("Veuillez sélectionner Homme ou Femme"); 
+        alert("Veuillez sÃ©lectionner Homme ou Femme"); 
         nom.focus();
         return false
     }
@@ -13,7 +13,7 @@ function testform(sexe,nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
         return false
     }
     if(prenom.value=="") {
-        alert("Veuillez saisir votre prénom"); 
+        alert("Veuillez saisir votre prÃ©nom"); 
         prenom.focus();
         return false
     }
@@ -28,7 +28,7 @@ function testform(sexe,nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
         return false
     }
     if(anaiss.value=="") {
-        alert("Veuillez saisir votre année de naissance"); 
+        alert("Veuillez saisir votre annÃ©e de naissance"); 
         anaiss.focus();
         return false
     }
@@ -44,18 +44,18 @@ function testform(sexe,nom,prenom,jnaiss,mnaiss,anaiss,mail,pass) {
 </script>
 
 <?php
-$Id = $HTTP_COOKIE_VARS['Id'];
+$Id = $_COOKIE['Id'];
 
 if ($Id=='OKDAK') {
 
 include ("../../conex.inc");
 include ("fonctions.inc");
 
-$id_key_refinscript = getHTTPVars('id_key_refinscript', $HTTP_POST_VARS, $HTTP_GET_VARS);
+$id_key_refinscript = getHTTPVars('id_key_refinscript', $_POST, $_GET);
 
 ?>	
 	<body bgcolor="#C0C0C0">
-<b><font color=red>Inscription --- étape 2/4</font></b></a><br><br>
+<b><font color=red>Inscription --- Ã©tape 2/4</font></b></a><br><br>
 
 <form method="post" action="popup05par.php" onSubmit="return testform(this.sexe,this.nom,this.prenom,this.jnaiss,this.mnaiss,this.anaiss,this.mail,this.pass)" enctype="multipart/form-data"> 
 
@@ -66,7 +66,7 @@ $id_key_refinscript = getHTTPVars('id_key_refinscript', $HTTP_POST_VARS, $HTTP_G
 					$Resultlist = mysql_query($Sqllist,$conexion);
 					mysql_query($Resultlist);
 					while($Vallist=mysql_fetch_array($Resultlist)){
-						echo "Vous ètes le père/la mère de ".$Vallist["prenom"]." ".$Vallist["nom"]."<br>";
+						echo "Vous Ã¨tes le pÃ¨re/la mÃ¨re de ".$Vallist["prenom"]." ".$Vallist["nom"]."<br>";
 					}
 
 					
@@ -87,7 +87,7 @@ FormulaireInscript($login,$conexion);
 	Photo <input type=file name="userfile"><br><br>
 
 	
-<font color=purple size=2><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractères spéciaux et doit peser moins d'1Mo</i></font>
+<font color=purple size=2><b><i>PS : le nom de l'image ne doit pas comporter d'espaces<br>ni de caractÃ¨res spÃ©ciaux et doit peser moins d'1Mo</i></font>
 
 
 		<input type="hidden" name="id_key_refinscript" value="<?php echo $id_key_refinscript; ?>">

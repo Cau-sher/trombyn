@@ -1,4 +1,4 @@
-<body bgcolor="#ff9933" text="#FFFFFF">
+﻿<body bgcolor="#ff9933" text="#FFFFFF">
 	<form action="upload.php3" method="post" 
 enctype="multipart/form-data"> 
 

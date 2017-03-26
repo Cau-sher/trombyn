@@ -1,8 +1,8 @@
 <?php
 
 	include ("../aqua_haut.htm");
-	$id_key_refinscript = getHTTPVars("id_key_refinscript", $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$login = getHTTPVars("login", $HTTP_POST_VARS, $HTTP_GET_VARS);
+	$id_key_refinscript = getHTTPVars("id_key_refinscript", $_POST, $HTTP_GET_VARS);
+	$login = getHTTPVars("login", $_POST, $HTTP_GET_VARS);
 
 ?>
 
@@ -14,7 +14,7 @@
 				<table width=100%><tr><td valign=top width=5%>
 				<?php
 				if ($conexion == "mauvaise") {
-						echo "<font color=red>Paramètres de connexion mauvaise</font>";
+						echo "<font color=red>ParamÃ¨tres de connexion mauvaise</font>";
 				} else {
 					mysql_select_db($login,$conexion);
 

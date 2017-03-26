@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	if (copy($userfile, "..trombi/images/mini/".$userfile_name)) {
 		//echo "ok"; 
 	} else {
