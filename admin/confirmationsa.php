@@ -23,31 +23,31 @@
 		echo "Format de photo incorrecte, elle ne sera pas enregistrée !";
 	}
 
-	$host = getHHTPVars('host', $_POST, $HTTP_GET_VARS);
-	$nomuser = getHHTPVars("nomuser", $_POST, $HTTP_GET_VARS);
+	$host = getHHTPVars('host', $_POST, $_GET);
+	$nomuser = getHHTPVars("nomuser", $_POST, $_GET);
 	//echo $userfile." no ".$userfile_name;
-	$password = getHHTPVars("password", $_POST, $HTTP_GET_VARS);
-	$nombase = getHHTPVars("nombase", $_POST, $HTTP_GET_VARS);
+	$password = getHHTPVars("password", $_POST, $_GET);
+	$nombase = getHHTPVars("nombase", $_POST, $_GET);
 
-	$loginadm = getHHTPVars("loginadm", $_POST, $HTTP_GET_VARS);
-	$passadm = getHHTPVars("passadm", $_POST, $HTTP_GET_VARS);
-	$loginmemb = getHHTPVars("loginmemb", $_POST, $HTTP_GET_VARS);
-	$passmemb = getHHTPVars("passmemb", $_POST, $HTTP_GET_VARS);
+	$loginadm = getHHTPVars("loginadm", $_POST, $_GET);
+	$passadm = getHHTPVars("passadm", $_POST, $_GET);
+	$loginmemb = getHHTPVars("loginmemb", $_POST, $_GET);
+	$passmemb = getHHTPVars("passmemb", $_POST, $_GET);
 
-	$sexe = getHHTPVars("sexe", $_POST, $HTTP_GET_VARS);
-	$nom = getHHTPVars("nom", $_POST, $HTTP_GET_VARS);
-	$prenom = getHHTPVars("prenom", $_POST, $HTTP_GET_VARS);
-	$adresse = getHHTPVars("adresse", $_POST, $HTTP_GET_VARS);
-	$cp = getHHTPVars("cp", $_POST, $HTTP_GET_VARS);
-	$ville = getHHTPVars("ville", $_POST, $HTTP_GET_VARS);
-	$jnaiss = getHHTPVars("jnaiss", $_POST, $HTTP_GET_VARS);
-	$mnaiss = getHHTPVars("mnaiss", $_POST, $HTTP_GET_VARS);
-	$anaiss = getHHTPVars("anaiss", $_POST, $HTTP_GET_VARS);
-	$mail = getHHTPVars("mail", $_POST, $HTTP_GET_VARS);
-	$fone = getHHTPVars("fone", $_POST, $HTTP_GET_VARS);
-	$activ = getHHTPVars("activ", $_POST, $HTTP_GET_VARS);
-	$autre = getHHTPVars("autre", $_POST, $HTTP_GET_VARS);
-	$pass = getHHTPVars("pass", $_POST, $HTTP_GET_VARS);
+	$sexe = getHHTPVars("sexe", $_POST, $_GET);
+	$nom = getHHTPVars("nom", $_POST, $_GET);
+	$prenom = getHHTPVars("prenom", $_POST, $_GET);
+	$adresse = getHHTPVars("adresse", $_POST, $_GET);
+	$cp = getHHTPVars("cp", $_POST, $_GET);
+	$ville = getHHTPVars("ville", $_POST, $_GET);
+	$jnaiss = getHHTPVars("jnaiss", $_POST, $_GET);
+	$mnaiss = getHHTPVars("mnaiss", $_POST, $_GET);
+	$anaiss = getHHTPVars("anaiss", $_POST, $_GET);
+	$mail = getHHTPVars("mail", $_POST, $_GET);
+	$fone = getHHTPVars("fone", $_POST, $_GET);
+	$activ = getHHTPVars("activ", $_POST, $_GET);
+	$autre = getHHTPVars("autre", $_POST, $_GET);
+	$pass = getHHTPVars("pass", $_POST, $_GET);
 
 
 	//s'il y a photo on l'upload
