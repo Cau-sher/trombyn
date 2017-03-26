@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 	require ("config_log.inc");
 
@@ -15,17 +15,16 @@
 		 return $value;
 	}
 
-	$login = getHHTPVars('login', $HTTP_POST_VARS, $HTTP_GET_VARS);
-	$pass = getHHTPVars('pass', $HTTP_POST_VARS, $HTTP_GET_VARS);
+	$login = getHHTPVars('login', $_POST, $_GET);
+	$pass = getHHTPVars('pass', $_POST, $_GET);
 
 	//if(isset($HTTP_COOKIE_VAR['Id'])) {
-		$Id = $HTTP_COOKIE_VARS['Id'];
+		$Id = $_COOKIE['Id'];
 	//}
 
 	//echo $loginadm;
 	//echo $passadm;
 	//echo $Id;
-
 
 	if ($Id=='OKDAK') {
 		header("location:membres/indexmf.php?trombibox=oui");
@@ -57,13 +56,12 @@
 					<b>Ouvrir une généalogie</b><br>
 		
 					<form method="POST" action="index.php">
-						<font size="2" color="red"><b>
-						
-							Login<br>
-						<input type="text" size="10" value="" name="login"><br>
-						Mot de passe<br>
-						<input type="password" value="" size="10" name="pass"></font><br><br>
-						<input type="submit" value="Connexion" name="entrer"></p>
+						<font size="2" color="red"><br />
+                            Login<br />
+						<input type="text" size="10" value="" name="login" /><br />
+						Mot de passe<br />
+						<input type="password" value="" size="10" name="pass" /></font><br /><br />
+						<input type="submit" value="Connexion" name="entrer" /></p>
 					</form>
 		<?php include("aqua_bas.htm"); ?>
 	</body>

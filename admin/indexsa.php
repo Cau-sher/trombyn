@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	include ("../conex.inc");
 	
 	function getHHTPVars($name, $POST, $GET)
@@ -14,10 +14,10 @@
 	 return $value;
 }
 
-$Id = $HTTP_COOKIE_VARS['Id'];
-$trombibox = getHHTPVars('trombibox', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$potins = getHHTPVars('potins', $HTTP_POST_VARS, $HTTP_GET_VARS);
-$conexbox = getHHTPVars('conexbox', $HTTP_POST_VARS, $HTTP_GET_VARS);
+$Id = $_COOKIE['Id'];
+$trombibox = getHHTPVars('trombibox', $_POST, $_GET);
+$potins = getHHTPVars('potins', $_POST, $_GET);
+$conexbox = getHHTPVars('conexbox', $_POST, $_GET);
 
 	
 if ($Id=='ADMIN') {

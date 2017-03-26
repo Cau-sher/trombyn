@@ -3,21 +3,19 @@
 	require ("fonctions.inc");
 	include ("../conex.inc");
 	
-	
-$potinbox = getHTTPVars("potinbox", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$rediger = getHTTPVars("rediger", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$mailnaissbox = getHTTPVars("mailnaissbox", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$inscripts = getHTTPVars("inscripts", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$photos = getHTTPVars("photos", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$listbox = getHTTPVars("listbox", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$trombibox = getHTTPVars("trombibox", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$reftrombi = getHTTPVars("reftrombi", $HTTP_POST_VARS, $HTTP_GET_VARS);
+    $potinbox = getHTTPVars("potinbox", $_POST, $_GET);
+    $rediger = getHTTPVars("rediger", $_POST, $_GET);
+    $mailnaissbox = getHTTPVars("mailnaissbox", $_POST, $_GET);
+    $inscripts = getHTTPVars("inscripts", $_POST, $_GET);
+    $photos = getHTTPVars("photos", $_POST, $_GET);
+    $listbox = getHTTPVars("listbox", $_POST, $_GET);
+    $trombibox = getHTTPVars("trombibox", $_POST, $_GET);
+    $reftrombi = getHTTPVars("reftrombi", $_POST, $_GET);
 
-$Id = $HTTP_COOKIE_VARS['Id'];
-	
-if ($Id=='OKDAK') {
-	//setcookie('Id', 'OKDAK', mktime(0,0,0,1,1,2010));
+    $Id = $_COOKIE['Id'];
 
+    if ($Id=='OKDAK') {
+    //setcookie('Id', 'OKDAK', mktime(0,0,0,1,1,2020));
 ?>
 <html>
 	<head>
@@ -100,4 +98,3 @@ if ($trombibox=="oui") {
 <?php } else {
 	
 	header("Location: ../index.php"); }
-	

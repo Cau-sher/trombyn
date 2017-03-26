@@ -11,31 +11,31 @@
         return $value;
     }
 
-    //echo $HTTP_POST_VARS["host"];
-    $host = getHTTPVars('host', $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $nomuser = getHTTPVars("nomuser", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $password = getHTTPVars("password", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $nombase = getHTTPVars("nombase", $HTTP_POST_VARS, $HTTP_GET_VARS);
+    //echo $_POST["host"];
+    $host = getHTTPVars('host', $_POST, $_GET);
+    $nomuser = getHTTPVars("nomuser", $_POST, $_GET);
+    $password = getHTTPVars("password", $_POST, $_GET);
+    $nombase = getHTTPVars("nombase", $_POST, $_GET);
 
-    $loginadm = getHTTPVars("loginadm", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $passadm = getHTTPVars("passadm", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $loginmemb = getHTTPVars("loginmemb", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $passmemb = getHTTPVars("passmemb", $HTTP_POST_VARS, $HTTP_GET_VARS);
+    $loginadm = getHTTPVars("loginadm", $_POST, $_GET);
+    $passadm = getHTTPVars("passadm", $_POST, $_GET);
+    $loginmemb = getHTTPVars("loginmemb", $_POST, $_GET);
+    $passmemb = getHTTPVars("passmemb", $_POST, $_GET);
 
-    $photo = getHTTPVars("photo", $HTTP_POST_VARS, $HTTP_GET_VARS);
+    $photo = getHTTPVars("photo", $_POST, $_GET);
 
-    $sexe = getHTTPVars("sexe", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $nom = getHTTPVars("nom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $prenom = getHTTPVars("prenom", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $adresse = getHTTPVars("adresse", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $cp = getHTTPVars("cp", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $ville = getHTTPVars("ville", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $naiss = getHTTPVars("naiss", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $mail = getHTTPVars("mail", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $fone = getHTTPVars("fone", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $activ = getHTTPVars("activ", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $autre = getHTTPVars("autre", $HTTP_POST_VARS, $HTTP_GET_VARS);
-    $pass = getHTTPVars("pass", $HTTP_POST_VARS, $HTTP_GET_VARS);
+    $sexe = getHTTPVars("sexe", $_POST, $_GET);
+    $nom = getHTTPVars("nom", $_POST, $_GET);
+    $prenom = getHTTPVars("prenom", $_POST, $_GET);
+    $adresse = getHTTPVars("adresse", $_POST, $_GET);
+    $cp = getHTTPVars("cp", $_POST, $_GET);
+    $ville = getHTTPVars("ville", $_POST, $_GET);
+    $naiss = getHTTPVars("naiss", $_POST, $_GET);
+    $mail = getHTTPVars("mail", $_POST, $_GET);
+    $fone = getHTTPVars("fone", $_POST, $_GET);
+    $activ = getHTTPVars("activ", $_POST, $_GET);
+    $autre = getHTTPVars("autre", $_POST, $_GET);
+    $pass = getHTTPVars("pass", $_POST, $_GET);
 
     //création d'un cookie propre à l'administrateur
     setcookie('Id', 'ADMIN', mktime(0,0,0,1,1,2020));

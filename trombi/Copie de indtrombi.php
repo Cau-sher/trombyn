@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 	include("../aqua_haut.htm");
 	include ("../conex.inc");
@@ -16,12 +16,12 @@ function getHTTPVars($name, $POST, $GET) {
  return $value;
 }
 
-$prenomdupere = getHTTPVars("prenomdupere", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$prenomdumere = getHTTPVars("prenomdumere", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$photodupere = getHTTPVars("photodupere", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$photodumere = getHTTPVars("photodumere", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$keydupere = getHTTPVars("keydupere", $HTTP_POST_VARS, $HTTP_GET_VARS);
-$keydumere = getHTTPVars("keydumere", $HTTP_POST_VARS, $HTTP_GET_VARS);
+$prenomdupere = getHTTPVars("prenomdupere", $_POST, $_GET);
+$prenomdumere = getHTTPVars("prenomdumere", $_POST, $_GET);
+$photodupere = getHTTPVars("photodupere", $_POST, $_GET);
+$photodumere = getHTTPVars("photodumere", $_POST, $_GET);
+$keydupere = getHTTPVars("keydupere", $_POST, $_GET);
+$keydumere = getHTTPVars("keydumere", $_POST, $_GET);
 
 	
 //choix du référant pour l'affichage --> par défaut l'administrateur
@@ -34,7 +34,7 @@ $keydumere = getHTTPVars("keydumere", $HTTP_POST_VARS, $HTTP_GET_VARS);
 if ($reftrombi=="") {
 	$reftrombi=4;
 } else {
-	$reftrombi = $HTTP_GET_VARS["reftrombi"];
+	$reftrombi = $_GET["reftrombi"];
 }
 
 //récupération des données du reférant pour l'affichage de la généalogie

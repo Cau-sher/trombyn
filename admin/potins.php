@@ -1,7 +1,7 @@
 <?php
 	include ("../conex.inc");
 
-    $count = getHHTPVars('count', $HTTP_POST_VARS, $HTTP_GET_VARS);
+    $count = getHHTPVars('count', $_POST, $_GET);
 
     include("../aqua_haut.htm");
 ?>
