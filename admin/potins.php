@@ -1,8 +1,6 @@
 <?php
 	include ("../conex.inc");
-
     $count = getHHTPVars('count', $_POST, $_GET);
-
     include("../aqua_haut.htm");
 ?>
 <font color="red">Ici vous pouvez supprimer les potins inopportuns !</font>

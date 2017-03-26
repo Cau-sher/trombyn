@@ -18,7 +18,7 @@
 	$login = getHHTPVars('login', $_POST, $_GET);
 	$pass = getHHTPVars('pass', $_POST, $_GET);
 
-	//if(isset($HTTP_COOKIE_VAR['Id'])) {
+	//if(isset($_COOKIE['Id'])) {
 		$Id = $_COOKIE['Id'];
 	//}
 
