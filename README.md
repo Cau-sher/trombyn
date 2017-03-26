@@ -1,9 +1,7 @@
 # Trombyn
 Arbre généalogie dynamique
 --------------------------
-Url     : http://codes-sources.commentcamarche.net/source/25407-arbre-genealogie-dynamique
-Auteur  : ozitoun
-Date    : 05/08/2013
+
 Licence :
 =========
 
@@ -25,3 +23,12 @@ Dans le zip un fichier INSTALLER.TXT vous donneras la marche à suivre... mais l
 idement vous devez avoir une autorisation en ecriture chez votre hébergeur... de même que pour l'upload des photos.
 
 Si vous remarquez des bugs ou si vous avez des améliorations n'hésitez pas à me le faire savoir : trombyn@fr.fm
+
+
+Sources (obsolète) :
+====================
+Url     : http://codes-sources.commentcamarche.net/source/25407-arbre-genealogie-dynamique
+
+Auteur  : ozitoun
+
+Date    : 05/08/2006
