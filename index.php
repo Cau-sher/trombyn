@@ -19,8 +19,11 @@
 	$pass = getHHTPVars('pass', $_POST, $_GET);
 
 	//if(isset($_COOKIE['Id'])) {
-		$Id = $_COOKIE['Id'];
+	//	$Id = $_COOKIE['Id'];
 	//}
+	
+	$Id = isset($_COOKIE['Id']) ? $_COOKIE['Id'] : NULL;
+	//$Id = !empty($_COOKIE['Id']) ? $_COOKIE['Id'] : NULL;
 
 	//echo $loginadm;
 	//echo $passadm;
