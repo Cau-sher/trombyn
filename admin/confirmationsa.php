@@ -63,7 +63,7 @@
 	include("../aqua_haut.htm");
 ?>
 
-<font color=red><b>Installation de Tr@mbyn : Conexion & Inscription Administrateur</b></font><br /><br /><br />
+<font color=red><b>Installation de Tr@mbyn : Connexion & Inscription Administrateur</b></font><br /><br /><br />
 
 <?php
 	$chaine2 = "<font color=blue><size=2><b>"
